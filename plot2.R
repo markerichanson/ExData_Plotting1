@@ -14,7 +14,8 @@ ylab_<-"Global Active Power (kilowatts)"
 par(ps=12)
 type_="l"
 
+png(filename="plot2.png")
 
 plot(working[,dateTime],working[,V3],xlab=xlab_,ylab=ylab_,type=type_)
-dev.copy(png,file="plot2.png")
+#dev.copy(png,file="plot2.png")
 dev.off()

@@ -10,6 +10,9 @@ setkey(working,V1)
 working<-working[c("1/2/2007","2/2/2007"),]
 active_global_power<-working$V2[!is.na(working$V2)]
 active_global_power<-as.numeric(active_global_power)
+
+png(filename="plot1.png")
+
 hist(active_global_power,main=main_,xlab=xlab_,ylab=ylab_,col=col_)
-dev.copy(png,file="plot1.png")
+#dev.copy(png,file="plot1.png")
 dev.off()
